@@ -1,0 +1,34 @@
+{
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.6.1"
+  }
+}
+
+{
+  "name": "elitenft-contract",
+  "version": "2.0.0",
+  "description": "Production-ready ERC721A NFT with whitelist, royalties & reveal",
+  "scripts": {
+    "gas": "npx hardhat test --grep 'gas'",
+"size": "npx hardhat size-contracts",
+"lint": "npx solhint 'contracts/**/*.sol'",
+"generate:merkle": "node scripts/generate-merkle-root.js"
+    "compile": "npx hardhat compile",
+    "test": "npx hardhat test",
+    "deploy:sepolia": "npx hardhat run scripts/deploy.js --network sepolia",
+    "verify:sepolia": "npx hardhat verify --network sepolia"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-ethers": "^3.0.5",
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.22.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.0"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.2",
+    "dotenv": "^16.4.5",
+    "@openzeppelin/merkle-tree": "^1.0.7",
+    "erc721a": "^5.0.0"
+  }
+}
+
